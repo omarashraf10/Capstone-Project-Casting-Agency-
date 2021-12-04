@@ -1,7 +1,7 @@
 Capstone Project for FSND Full Stack Developer Nanodegree
 
 ### Base URL
-https://udacityfsndcastingagency.herokuapp.com/
+https://evening-chamber-56051.herokuapp.com/
 
 ### Motivations
 final project of full stack nanodegree ipmroves my skills and teaches lots of topics
@@ -42,7 +42,7 @@ This will install all of the required packages we selected within the `requireme
  
 for my local postgres path :'postgresql://postgres:Email1085@localhost:5432/agency'
 for my postgres on heroku :
-"postgres://xovawgjaxekusq:6feffebf70bd8caa4817ab6ed0a6567a98e67cd909743a23986456ea6a1b1636@ec2-54-160-35-196.compute-1.amazonaws.com:5432/d5amt59qcm45op"
+"postgres://ylaxdrdccwkyfc:da1f14f338d94932f33905dedd4ce95aad945755897d2cdc4a2755e0c4ce468c@ec2-18-208-102-44.compute-1.amazonaws.com:5432/d68n857frnfinv"
 
 change with your database path in brackets below
 database_path = "postgres://{}:{}@{}/{}".format(<user-name>,'<password>','localhost:5432', <database_name>)"
@@ -117,7 +117,7 @@ GET /actors
 Request Headers: None
 Requires permission: read:actors
 Using Postman with sample below and curl
-Sample: curl -X GET https://udacityfsndcastingagency.herokuapp.com/actors
+Sample: curl -X GET https://evening-chamber-56051.herokuapp.com/actors
 
     {
     "actors":[
@@ -134,7 +134,7 @@ GET /movies
 Request Headers: None
 Requires permission: read:movies
 Using Postman with sample below
-Sample: curl -X GET https://udacityfsndcastingagency.herokuapp.com/movies
+Sample: curl -X GET https://evening-chamber-56051.herokuapp.com/movies
 
  {
    "movies":[
@@ -153,10 +153,10 @@ Request Arguments: integer id
 Request Headers: None
 Requires permission: delete:actors
 Using Postman with sample below
-Sample: curl -X DELETE https://udacityfsndcastingagency.herokuapp.com/actors/2
+Sample: curl -X DELETE https://evening-chamber-56051.herokuapp.com/actors/2
 
     {
-    "deleted": 1,
+    "deleted": 2,
     "success": true
 }
 
@@ -165,7 +165,7 @@ Request Arguments: integer id
 Request Headers: None
 Requires permission: delete:movies
 Using Postman with sample below
-Sample: curl -X DELETE https://udacityfsndcastingagency.herokuapp.com/actors/1
+Sample: curl -X DELETE https://evening-chamber-56051.herokuapp.com/actors/1
 
   {
     "deleted": 1,
@@ -178,7 +178,7 @@ Request Arguments: None
 Request Headers: (application/json) string name - integer age - string gender
 Requires permission: create:actors
 Using Postman with sample below
-Sample: curl -X POST https://udacityfsndcastingagency.herokuapp.com/actors
+Sample: curl -X POST https://evening-chamber-56051.herokuapp.com/actors
 
     {
     "actor_id": 3,
@@ -190,7 +190,7 @@ Request Arguments: None
 Request Headers: (application/json) string title - date release_date
 Requires permission: create:movies
 Using Postman with sample below
-Sample: curl -X POST https://udacityfsndcastingagency.herokuapp.com/movies
+Sample: curl -X POST https://evening-chamber-56051.herokuapp.com/movies
 
     {
     "movie_id": 2,
@@ -202,13 +202,13 @@ Request Arguments: integer id
 Request Headers: (application/json)  string name - integer age - string gender
 Requires permission: edit:actors
 Using Postman with sample below
-Sample: curl -X PATCH https://udacityfsndcastingagency.herokuapp.com/actors/3
+Sample: curl -X PATCH https://evening-chamber-56051.herokuapp.com/actors/3
 
 {
    "actor":{
       "age":60,
       "gender":"male",
-      "id":2,
+      "id":3,
       "name":"Ahmed"
    },
    "success":True
@@ -218,19 +218,19 @@ Request Arguments: integer id
 Request Headers: (application/json)  string title - date release_date
 Requires permission: edit:movies
 Using Postman with sample below
-Sample: curl -X PATCH https://udacityfsndcastingagency.herokuapp.com/movies/1
+Sample: curl -X PATCH https://evening-chamber-56051.herokuapp.com/movies/1
 
 {
    "movie":{
       "genre":"Action",
-      "id":3,
+      "id":1,
       "release_date":"2006-04-12",
       "title":"Tito"
    },
    "success":True
 }
 ### Login URL
-https://dev-4pyf7rh9.us.auth0.com/authorize?audience=casting&response_type=token&client_id=X0BQ36iW63CEY9pRgjciYDUsgE5CVWPc&redirect_uri=https://udacityfsndcastingagency.herokuapp.com/
+https://omarfsnd.us.auth0.com/authorize?audience=Agency&response_type=token&client_id=q4QdKKOAt1lmC1kAvmF1vAepCiWdBfzM&redirect_uri=https://evening-chamber-56051.herokuapp.com/
 
 ### Users
 # Casting Assistant
@@ -259,7 +259,7 @@ https://dev-4pyf7rh9.us.auth0.com/authorize?audience=casting&response_type=token
  
  export FLASK_ENV=development
  
- export DATABASE_URL="postgres://xovawgjaxekusq:6feffebf70bd8caa4817ab6ed0a6567a98e67cd909743a23986456ea6a1b1636@ec2-54-160-35-196.compute-1.amazonaws.com:5432/d5amt59qcm45op"
+ export DATABASE_URL="postgres://ylaxdrdccwkyfc:da1f14f338d94932f33905dedd4ce95aad945755897d2cdc4a2755e0c4ce468c@ec2-18-208-102-44.compute-1.amazonaws.com:5432/d68n857frnfinv"
 
  export ASSISTANT_TOKEN=''
  
